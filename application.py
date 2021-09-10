@@ -1,7 +1,5 @@
-import os
 from flask import Flask, flash, render_template, request, session, redirect, url_for
 import flask_login
-import flask_sqlalchemy
 from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import Session, sessionmaker
