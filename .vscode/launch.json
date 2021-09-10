@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "node-terminal",
+            "name": "JavaScript Debug Terminal",
+            "request": "launch",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type":"python",
+            "request": "launch",
+            "name": "Start Flask Debugging",
+            "cwd": "${workspaceFolder}",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "application.py",
+                "FLASK_ENV": "development",
+                "FLASK_DEBUG": "1"
+            },   
+            "args": [
+                "run",
+            ],
+            "jinja": true
+        }
+    ]
+}

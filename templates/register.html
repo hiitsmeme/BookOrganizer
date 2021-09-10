@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %} 
+    Register
+{% endblock %} 
+
+{% block main %} 
+
+    <form action="/register" method="post" class="h-full w-full">
+        <div class="flex flex-col h-full w-full place-content-center space-y-6">
+            <input required autocomplete="off" autofocus class="form-control bg-indigo-100 hover:bg-indigo-100 
+                focus:border-indigo-300 focus:ring ring-indigo-300 focus:bg-indigo-100 w-1/5 self-center text-center" 
+                name="name" placeholder="Username" type="text">
+            <input required class="form-control w-1/5 self-center text-center bg-indigo-100 hover:bg-indigo-100 
+                focus:border-indigo-300 focus:ring ring-indigo-300 focus:bg-indigo-100"     
+                name="password" placeholder="Password" type="password">
+            <input required class="form-control w-1/5 self-center text-center bg-indigo-100 hover:bg-indigo-100 
+                focus:border-indigo-300 focus:ring ring-indigo-300 focus:bg-indigo-100" 
+                name="confirmation" placeholder="Confirm Password" type="password">
+            <button class="rounded-lg w-1/5 self-center p-2 border-none bg-gray-400 text-black hover:bg-gray-500 hover:text-white 
+                active:border-0 active:shadow-none active:ring-0" type="submit">Log In</button>   
+        </div>
+    </form>
+
+{% endblock %} 
