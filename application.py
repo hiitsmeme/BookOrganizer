@@ -113,11 +113,8 @@ def add():
         if len(title) == 0 or len(author) == 0 or len(pages) == 0 or len(rating) == 0 or len(month) == 0 or len(year) == 0:
             return render_template("apology_home.html", message="Fill in all the fields")
 
-        if Book.findBook(title, author) != None:
-            return render_template("apology_home.html", message="Book already added")
-        else:
-            Book(user_id, title, author, pages, rating, month, year)
-            return redirect("/")
+        Book(user_id, title, author, pages, rating, month, year)
+        return redirect("/")
 
 @app.route("/library", methods=["GET", "POST"])
 @flask_login.login_required
@@ -193,11 +190,6 @@ def year_f(year_f):
     
     books = sess.query(Book).filter_by(user_id=flask_login.current_user.id).filter_by(year=year_f).order_by(Book.year.desc()).order_by(Book.month.desc())
     return books
-
-
-
-           
-
 
 
 @app.route("/search", methods=["GET", "POST"])
