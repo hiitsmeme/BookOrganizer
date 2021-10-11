@@ -1,6 +1,7 @@
 {
     "version": "0.2.0",
     "configurations": [
+        
         {
             "type": "pwa-chrome",
             "request": "launch",
@@ -21,7 +22,7 @@
             "cwd": "${workspaceFolder}",
             "module": "flask",
             "env": {
-                "FLASK_APP": "application.py",
+                "FLASK_APP": "./src/application.py",
                 "FLASK_ENV": "development",
                 "FLASK_DEBUG": "1"
             },   
