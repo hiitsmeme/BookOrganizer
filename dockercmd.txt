@@ -1,0 +1,1 @@
+docker run -d --restart unless-stopped -p 8080:8080 --name test1 -v myvol:/app topfsonja/bookorganizer:latest
