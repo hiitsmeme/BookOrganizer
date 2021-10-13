@@ -21,7 +21,7 @@ def after_request(response):
 app.config["SESSION_FILE_DIR"] = mkdtemp()
 app.config["SESSION_PERMANENT"] = False 
 app.config["SESSION_TYPE"] = "filesystem"
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///./src/data.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 login_manager = flask_login.LoginManager()
@@ -30,7 +30,7 @@ login_manager.init_app(app)
 MySession = sessionmaker()
 Base = declarative_base()
 
-engine = create_engine('sqlite:///data.db')
+engine = create_engine('sqlite:///./src/data.db')
 Base.metadata.create_all(bind=engine)
 MySession.configure(bind=engine)
 session = MySession()
