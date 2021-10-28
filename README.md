@@ -1,7 +1,14 @@
 # Book Organizer
 #### Video Demo: https://youtu.be/tu7T7vU5cFk
 ## Description:
-BookOrganizer helps you keeping track of your read books. After creating your personal account you can start adding books to your online library. Various filters aid you if you have a longer reading history. 
+BookOrganizer helps you keeping track of your read books and displays information about them. After creating your personal account you can start adding books to your online library. Various filters aid you if you have a longer reading history. Information you can enter about your read book when adding it to your library:
+- title
+- author
+- pages
+- rating
+- month and year that you've read the book in
+
+You can also search for specific books within your library if you want to lookup the rating for example.
 
 ## Setup Project in Editor
 --Process may vary--
